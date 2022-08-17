@@ -2,7 +2,7 @@
 import React from 'react';
 
 // == Import
-import './styles.css';
+
 import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
