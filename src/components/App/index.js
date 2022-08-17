@@ -7,28 +7,38 @@ import React from 'react';
 const [data, setData] = useState([])
 const [loading, setLoading] = useState(true);
 
+//axios request to fetch the data
+useEffect(() => {
+  axios.get('MOCK_DATA.json')
+        .then(res => {
+            setData(res.data);
+            setLoading(false);
+        })
+        .catch(() => {
+            alert('There was an error while retrieving the data')
+        })
+}, [])
+
 const nPages = data.length
 
 // User is currently on this page
 const [currentPage, setCurrentPage] = useState(1);
 
-const nextPage = () => {
-  if(currentPage !== nPages) 
-      setCurrentPage(currentPage + 1)
-}
-const prevPage = () => {
-  if(currentPage !== 1) 
-      setCurrentPage(currentPage - 1)
-}
+
 
 
 // == Composant
 const App = () => (
-  <Pagination
-    nPages = { nPages }
-    currentPage = { currentPage } 
-    setCurrentPage = { setCurrentPage }
-/>
+
+  <div className='container mt-5'>
+            <h2> Simple Pagination Example in React </h2>
+            <Records data={currentRecords}/>
+      <Pagination
+        nPages = { nPages }
+        currentPage = { currentPage } 
+        setCurrentPage = { setCurrentPage }
+      />
+  </div>
 );
 
 // == Export
