@@ -9,12 +9,12 @@
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json"
   },
   "devDependencies": {
-    "@babel/core": "*",
+    "@babel/core": "^7.18.10",
+    "@babel/eslint-parser": "^7.18.9",
     "@babel/plugin-proposal-class-properties": "*",
     "@babel/plugin-proposal-object-rest-spread": "*",
     "@babel/preset-env": "*",
     "@babel/preset-react": "*",
-    "babel-eslint": "*",
     "babel-loader": "*",
     "bundle-stats-webpack-plugin": "*",
     "clean-webpack-plugin": "*",
@@ -22,7 +22,7 @@
     "cross-env": "*",
     "css-loader": "*",
     "cssnano": "*",
-    "eslint": "*",
+    "eslint": "^8.22.0",
     "eslint-config-airbnb": "*",
     "eslint-import-resolver-alias": "*",
     "eslint-plugin-import": "*",
@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
+    "axios": "^0.27.2",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*"

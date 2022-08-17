@@ -1,9 +1,8 @@
 // == Import npm
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-
-import Records from './components/Records';
-import Pagination from './components/Pagination';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Records from './../Records';
+import Pagination from './../Pagination';
 
 // == Import
 
