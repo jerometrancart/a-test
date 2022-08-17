@@ -1,6 +1,6 @@
 const paths = require('./paths');
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 const port = 8080;
@@ -46,13 +46,21 @@ module.exports = merge(common, {
 
   devServer: {
     historyApiFallback: true,
-    contentBase: paths.build,
-    clientLogLevel: 'warn',
-    overlay: true,
-    stats: 'minimal',
     open: false,
     compress: true,
     hot: true,
     port,
+    devMiddleware: {
+      stats: 'minimal',
+    },
+    client: {
+      overlay: true,
+      logging: 'warn',
+    },
+    static: {
+      staticOptions: {
+        contentBase: paths.build,
+      },
+    },
   },
 });
