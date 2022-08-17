@@ -41,13 +41,13 @@ const [currentPage, setCurrentPage] = useState(1);
 const App = () => (
 
   <div className='container mt-5'>
-            <h2> Simple Pagination Example in React </h2>
-            <Records data={currentRecords}/>
-      <Pagination
-        nPages = { nPages }
-        currentPage = { currentPage } 
-        setCurrentPage = { setCurrentPage }
-      />
+      <h2> Simple Pagination Example in React </h2>
+        <Records data={currentRecords}/>
+        <Pagination
+          nPages = { nPages }
+          currentPage = { currentPage } 
+          setCurrentPage = { setCurrentPage }
+        />
   </div>
 );
 
